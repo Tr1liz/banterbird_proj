@@ -1,4 +1,10 @@
-const username = "admin";
+let username = localStorage.getItem("username");
+if( !username) {
+  window.location.href = "/login";
+  
+}
+
+
 //Render Post
 //We want new tweets to feel fresh — they should appear at the top, not the bottom.
 function renderPost(post) {
